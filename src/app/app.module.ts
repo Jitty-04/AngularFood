@@ -7,6 +7,27 @@ import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
 import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { Router, RouterModule, Routes } from '@angular/router';
+
+const myRouter:Routes=[
+  {
+    path:"",
+    component:HomeComponent
+  },
+  {
+    path:"order",
+    component:OrderComponent
+  },
+  {
+    path:"register",
+    component:RegisterComponent
+  },
+  {
+    path:"signup",
+    component:SigninComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -15,11 +36,14 @@ import { RegisterComponent } from './register/register.component';
     OrderComponent,
     SigninComponent,
     RegisterComponent,
+    NavigationComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRouter)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
