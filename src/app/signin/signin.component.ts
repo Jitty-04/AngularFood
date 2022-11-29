@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  mobileNumber=""
+
+  readValues=()=>
+  {
+    let data:any={"mobileNumber":this.mobileNumber}
+    console.log(data)
+  }
 
 }
